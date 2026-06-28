@@ -1,0 +1,296 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#222;
+    padding-bottom:100px;
+}
+
+/* HEADER */
+
+.top-header{
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+}
+
+.left-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    width:75%;
+}
+
+.back-btn{
+    font-size:26px;
+    cursor:pointer;
+}
+
+.search-bar{
+    width:100%;
+    height:50px;
+    border:2px solid #ff7a00;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    padding:0 15px;
+    background:#fff;
+}
+
+.search-bar i{
+    color:#777;
+}
+
+.search-bar input{
+    border:none;
+    outline:none;
+    width:100%;
+    margin-left:10px;
+    font-size:17px;
+}
+
+.right-section{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.right-section i{
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* MENU */
+
+.menu-bar{
+    background:#fff;
+    display:flex;
+    overflow-x:auto;
+    border-bottom:1px solid #ddd;
+}
+
+.menu{
+    padding:18px;
+    white-space:nowrap;
+    font-size:18px;
+    color:#666;
+    cursor:pointer;
+}
+
+.active-menu{
+    color:#ff6b00;
+    border-bottom:4px solid #ff6b00;
+}
+
+/* IMAGE */
+
+.medicine-image img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+}
+
+/* PRICE SECTION */
+
+.price-section{
+    background:linear-gradient(to right,#7a00ff,#c100ff);
+    color:#fff;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.special-text{
+    font-size:16px;
+}
+
+.price-left h1{
+    font-size:42px;
+    margin:10px 0;
+}
+
+.discount-row{
+    display:flex;
+    gap:12px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    opacity:0.8;
+}
+
+.discount{
+    font-size:22px;
+}
+
+.timer-box{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* DETAILS */
+
+.product-details{
+    background:#fff;
+    padding:20px;
+}
+
+.offer-tags{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.pink-tag{
+    background:#ffe4ef;
+    color:#ff0066;
+    padding:8px 12px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.yellow-tag{
+    background:#fff2db;
+    color:#ff9900;
+    padding:8px 12px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.product-title{
+    margin-top:20px;
+    font-size:30px;
+    line-height:1.4;
+}
+
+.top-box{
+    background:#fff0e2;
+    color:#c97800;
+    padding:15px;
+    border-radius:10px;
+    margin-top:20px;
+    font-size:20px;
+}
+
+.feature-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+    color:#8b623f;
+}
+
+.rating-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+}
+
+.rating-text{
+    font-size:22px;
+}
+
+.icons i{
+    font-size:28px;
+    margin-left:18px;
+}
+
+/* EXTRA INFO */
+
+.extra-info{
+    margin-top:10px;
+    background:#fff;
+    padding:20px;
+}
+
+.info-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info-box:last-child{
+    border-bottom:none;
+}
+
+.info-box i{
+    color:#ff7a00;
+    font-size:20px;
+}
+
+/* FOOTER */
+
+.bottom-buttons{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:flex;
+}
+
+.buy-btn{
+    width:50%;
+    border:none;
+    background:#ffb000;
+    color:#fff;
+    padding:22px;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.cart-btn{
+    width:50%;
+    border:none;
+    background:#ff5c00;
+    color:#fff;
+    padding:22px;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .left-section{
+        width:65%;
+    }
+
+    .search-bar input{
+        font-size:15px;
+    }
+
+    .medicine-image img{
+        height:300px;
+    }
+
+    .price-left h1{
+        font-size:32px;
+    }
+
+    .timer-box{
+        font-size:15px;
+    }
+
+    .product-title{
+        font-size:22px;
+    }
+
+    .buy-btn,
+    .cart-btn{
+        font-size:20px;
+    }
+
+}

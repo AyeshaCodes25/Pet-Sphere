@@ -1,0 +1,79 @@
+/* RESET & WRAPPER */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+.app-wrapper { display: flex; height: 100vh; background: #f4f7f6; overflow: hidden; }
+
+/* SIDEBAR: Image 7cd2a728 Fixed */
+.sidebar {
+    width: 260px;
+    background-color: #0b0e14;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.sidebar-header { padding: 40px 30px; font-size: 24px; font-weight: bold; color: #cc0000; }
+.menu-item { padding: 18px 30px; color: #b3b3b3; text-decoration: none; display: flex; gap: 15px; align-items: center; }
+.menu-item.active { background: #cc0000; color: white; border-radius: 0 50px 50px 0; margin-right: 20px; }
+.logout { margin-top: auto; padding-bottom: 30px; }
+
+/* MAIN PANEL */
+.main-panel { flex: 1; padding: 40px; overflow-y: auto; }
+.content-header { margin-bottom: 30px; }
+
+/* GRID SYSTEM */
+.payment-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 25px; }
+
+/* CARD & FORMS */
+.data-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; }
+.payment-form { display: none; animation: fadeIn 0.3s ease; }
+.payment-form.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* FORM ELEMENTS */
+.field-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 8px; }
+label { font-size: 14px; font-weight: 600; color: #555; }
+.form-input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-size: 15px; }
+.form-input:focus { border-color: #cc0000; }
+.form-row { display: flex; gap: 15px; }
+.submit-red-btn { width: 100%; background: #cc0000; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+/* SELECTION STYLING */
+.radio-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.radio-card:hover { border-color: #cc0000; background: #fff5f5; }
+
+/* SUMMARY STYLING */
+.summary-line { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px; }
+.total { font-size: 18px; font-weight: bold; color: #cc0000; border-top: 1px solid #eee; padding-top: 10px; }
+hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
+.helper-text { font-size: 13px; color: #777; margin-bottom: 15px; }
+.content-header {
+    display: flex;
+    justify-content: space-between; /* Isse title left aur button right par chala jayega */
+    align-items: center;
+    width: 100%;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #d93838;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.back-btn i {
+    margin-right: 8px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSphere | Client Dashboard Form</title>
+    <link rel="stylesheet" href="dashboard-client.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="dashboard-client.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <!-- Sidebar (Wohi Structure) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-paw"></i>
+                <span>PetSphere</span>
+            </div>
+            
+            <nav class="menu-list">
+                <a href="#" class="menu-item active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="#" class="menu-item"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#" class="menu-item"><i class="fas fa-credit-card"></i> Payments</a>
+                <a href="#" class="menu-item"><i class="fas fa-history"></i> History</a>
+                <a href="#" class="menu-item"><i class="fas fa-globe"></i> View Website</a>
+                <a href="#" class="menu-item logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Panel -->
+        <main class="main-panel">
+            <header class="header">
+                <h2>Client Dashboard</h2>
+                <div class="user-meta">
+                    <input type="text" value="Client-panel" class="inline-edit-input">
+                    
+                </div>
+            </header>
+
+            <form class="dashboard-grid">
+                <!-- Payment Form Card -->
+                <div class="data-card">
+                    <div class="card-top">
+                        <span class="card-label">Outstanding Amount</span>
+                    </div>
+                    <div class="input-with-icon">
+                        <span class="currency-tag">Rs.</span>
+                        <input type="number" class="val-input" value="15500">
+                    </div>
+                    <div class="field-group">
+                        <label>Last Activity Note</label>
+                        <input type="text" class="desc-input" value="Vet Consultation fee paid.">
+                    </div>
+                    <button type="button" class="submit-red-btn" style="margin-top: 15px;">+ Pay Now</button>
+                </div>
+
+                <!-- Updates / Status Form Card -->
+                <div class="data-card">
+                    <h3>Recent Updates</h3>
+                    <div class="form-notif-row">
+                        <select class="status-select confirmed">
+                            <option selected>Confirmed</option>
+                            <option>Pending</option>
+                            <option>Cancelled</option>
+                        </select>
+                        <input type="text" value="Appointment with Dr. Sarah Ahmed" class="row-input">
+                    </div>
+                    <div class="form-notif-row">
+                        <select class="status-select pending">
+                            <option>Confirmed</option>
+                            <option selected>Pending</option>
+                            <option>Cancelled</option>
+                        </select>
+                        <input type="text" value="Medicine Order #102 in transit" class="row-input">
+                    </div>
+                </div>
+
+                <!-- Feedback Form Card -->
+                <div class="data-card">
+                    <h3>Quick Feedback</h3>
+                    <div class="stars-input">
+                        <select class="rating-dropdown">
+                            <option>⭐⭐⭐⭐⭐ (Excellent)</option>
+                            <option selected>⭐⭐⭐⭐ (Good)</option>
+                            <option>⭐⭐⭐ (Average)</option>
+                            <option>⭐⭐ (Poor)</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Write your experience...">Great service, very satisfied with the vet!</textarea>
+                    <button type="submit" class="submit-red-btn">Submit Review</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>

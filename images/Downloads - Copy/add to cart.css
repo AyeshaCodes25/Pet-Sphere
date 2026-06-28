@@ -1,0 +1,322 @@
+/* General Reset & Layout Integration */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f5f7; 
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR STYLES (Kept exactly same) */
+.sidebar {
+    width: 260px;
+    background-color: #1a1c2e; 
+    color: #fff;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f63854; 
+    padding: 0 25px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-item {
+    color: #a0aec0;
+    text-decoration: none;
+    padding: 14px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item.active {
+    color: #fff;
+    background-color: #f63854; 
+    border-radius: 0 25px 25px 0;
+    margin-right: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f1f3f6; 
+}
+
+.content-header {
+    margin-bottom: 30px;
+}
+
+.header-title h2 {
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.header-title p {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* TWO COLUMN WRAPPER GRID */
+.cart-checkout-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Responsively balances layout proportions */
+    gap: 30px;
+    align-items: start;
+}
+
+/* FORM CARD MAIN STYLE */
+.form-card-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.form-section-title {
+    font-size: 18px;
+    color: #2d3748;
+    margin-bottom: 25px;
+    font-weight: 600;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section-title i {
+    color: #e53e3e; /* Accent icon color */
+}
+
+/* LEFT SIDE: CART ITEMS CARDS DESIGN */
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.cart-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.item-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #e53e3e;
+    background-color: rgba(229, 62, 62, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.cart-item-card h4 {
+    font-size: 16px;
+    color: #1a202c;
+    margin-top: 5px;
+}
+
+.item-id {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.item-qty-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Qty Buttons UI */
+.qty-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4a5568;
+    transition: background 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: #edf2f7;
+}
+
+.qty-input {
+    width: 35px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #cbd5e0;
+    border-right: 1px solid #cbd5e0;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+}
+
+/* Hide arrow keys inside number input */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.item-price {
+    font-weight: 700;
+    color: #2d3748;
+    min-width: 70px;
+    text-align: right;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #e53e3e;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.remove-item-btn:hover {
+    transform: scale(1.15);
+}
+
+/* Calculations Footer block */
+.order-summary-form-footer {
+    border-top: 2px dashed #edf2f7;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    color: #718096;
+    font-size: 14px;
+}
+
+.total-row {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.total-price {
+    color: #e53e3e;
+}
+
+/* RIGHT SIDE: BILLING FORM INPUTS */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+    background-color: #fff;
+}
+
+/* Action Confirm Button Placement */
+.form-actions-full {
+    margin-top: 15px;
+}
+
+.btn-place-order {
+    width: 100%;
+    background-color: #e53e3e; /* Matching dynamic red branding theme */
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-place-order:hover {
+    background-color: #c53030;
+    transform: translateY(-1px);
+}

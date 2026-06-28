@@ -1,0 +1,183 @@
+/* Container Utility Base matching Pharmacy Viewport */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+/* SIDEBAR RE-ALIGNMENT (Exact Color Palette from Image 2) */
+.sidebar {
+    width: 300px; /* Precise sidebar proportion allocation */
+    background-color: #111827; /* Absolute Dark Midnight Blue */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 15px;
+    margin-bottom: 50px;
+}
+
+.logo-icon {
+    color: #ef4444; /* Vivid Coral Red matching image brand mark */
+    font-size: 24px;
+}
+
+.logo-text {
+    color: #ef4444;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #9ca3af; /* High contrast muted grey for non-active states */
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 30px; /* Pill layout shape configuration */
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-item i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* EXACT PHARMACY ACTIVE RED PILL HIGHLIGHT */
+.nav-item.active {
+    background-color: #f43f5e; /* Crisp dynamic reddish pink matching current view */
+    color: #ffffff !important;
+}
+
+/* RIGHT MAIN BLOCK LAYOUT RULES */
+.main-content {
+    flex-grow: 1;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f4f6; /* Matching clean background tint */
+}
+
+.content-header {
+    margin-bottom: 35px;
+}
+
+.page-title {
+    color: #111827;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.page-subtitle {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* WHITE WRAPPER BLOCK MATCHING MEDICINE INVENTORY PANEL */
+.pharmacy-style-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    max-width: 650px;
+    width: 100%;
+}
+
+.logout-box-interior {
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.logout-icon-accent {
+    width: 70px;
+    height: 70px;
+    background-color: #fee2e2;
+    color: #ef4444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 25px auto;
+}
+
+.confirmation-heading {
+    color: #111827;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.confirmation-text {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* CONTROL BUTTONS WITH FORM DISPLAY INTEGRATION */
+.logout-action-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-primary-red {
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.btn-primary-red:hover {
+    background-color: #dc2626;
+}
+
+.btn-secondary-outline {
+    background-color: #ffffff;
+    color: #4b5563;
+    text-decoration: none;
+    padding: 13px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    display: inline-block;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-secondary-outline:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}

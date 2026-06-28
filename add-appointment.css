@@ -1,0 +1,83 @@
+/* Special Form Styling - Matching your screenshot */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.form-card-v2 {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 25px; /* Extra rounded corners like your image */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.form-header-v2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form-header-v2 h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.back-icon {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.input-group-v2 {
+    margin-bottom: 20px;
+}
+
+.input-group-v2 label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.input-group-v2 input, 
+.input-group-v2 select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    outline: none;
+    font-size: 14px;
+    color: #334155;
+}
+
+.row-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.btn-save-v2 {
+    width: 100%;
+    background: #ef4444; /* Your Red theme color */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-save-v2:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}

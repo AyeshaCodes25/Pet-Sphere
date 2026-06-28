@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSphere | Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="add to cart.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-paw"></i> PetSphere
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="#" class="nav-item active"><i class="fa-solid fa-shop"></i> Manage Shop</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-user-doctor"></i> Vet Consults</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-pills"></i> Pharmacy</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-globe"></i> View Website</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="content-header">
+                <div class="header-title">
+                    <h2>Shopping Cart & Checkout</h2>
+                    <p>Review your selected birds and complete your order</p>
+                </div>
+            </header>
+
+            <div class="cart-checkout-wrapper">
+                
+                <section class="form-card-container cart-summary-section">
+                    <h3 class="form-section-title"><i class="fa-solid fa-basket-shopping"></i> Selected Items</h3>
+                    
+                    <div class="cart-items-list">
+                        <div class="cart-item-card">
+                            <div class="item-details">
+                                <span class="item-category">Parrots Cat</span>
+                                <h4>African Grey Parrot</h4>
+                                <p class="item-id">ID: #P-102</p>
+                            </div>
+                            <div class="item-qty-price">
+                                <div class="qty-control">
+                                    <button type="button" class="qty-btn">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button type="button" class="qty-btn">+</button>
+                                </div>
+                                <span class="item-price">$120.00</span>
+                                <button type="button" class="remove-item-btn"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="cart-item-card">
+                            <div class="item-details">
+                                <span class="item-category">Pigeons Cat</span>
+                                <h4>Fantail Pigeon (Pair)</h4>
+                                <p class="item-id">ID: #PG-405</p>
+                            </div>
+                            <div class="item-qty-price">
+                                <div class="qty-control">
+                                    <button type="button" class="qty-btn">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button type="button" class="qty-btn">+</button>
+                                </div>
+                                <span class="item-price">$45.00</span>
+                                <button type="button" class="remove-item-btn"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary-form-footer">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span>$165.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping Fee:</span>
+                            <span>$15.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Grand Total:</span>
+                            <span class="total-price">$180.00</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-card-container checkout-form-section">
+                    <h3 class="form-section-title"><i class="fa-solid fa-credit-card"></i> Shipping & Billing Details</h3>
+                    
+                    <form action="" method="POST" class="checkout-form">
+                        
+                        <div class="form-group">
+                            <label for="customer-name">Full Name</label>
+                            <input type="text" id="customer-name" name="customer_name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-email">Email Address</label>
+                            <input type="email" id="customer-email" name="customer_email" placeholder="username@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" name="customer_phone" placeholder="e.g., +92 300 1234567" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="shipping-address">Shipping Address</label>
+                            <textarea id="shipping-address" name="shipping_address" rows="3" placeholder="Complete street address, city" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method</label>
+                            <select id="payment-method" name="payment_method" required>
+                                <option value="" disabled selected>Select Payment Option</option>
+                                <option value="COD">Cash on Delivery (COD)</option>
+                                <option value="Bank">Direct Bank Transfer</option>
+                                <option value="Card">Credit / Debit Card</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions-full">
+                            <button type="submit" class="btn-place-order">Confirm & Place Order</button>
+                        </div>
+
+                    </form>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

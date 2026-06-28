@@ -1,0 +1,318 @@
+/* style.css - Premium Edition */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-red: #ff4b5c;
+    --primary-dark: #0f172a;
+    --sidebar-hover: rgba(255, 75, 92, 0.1);
+    --bg-light: #f8fafc;
+    --border-color: #e2e8f0;
+    --text-heading: #1e293b;
+    --text-body: #64748b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-body);
+    display: flex;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* --- SIDEBAR DESIGN --- */
+.sidebar {
+    width: 280px;
+    background-color: var(--primary-dark);
+    height: 100vh;
+    position: fixed;
+    padding: 2.5rem 1.5rem;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--sidebar-hover);
+    color: var(--white);
+}
+
+.nav-links a.active {
+    background-color: var(--primary-red);
+    box-shadow: 0 10px 15px -3px rgba(255, 75, 92, 0.4);
+}
+
+/* --- MAIN CONTENT WINDOW --- */
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+.header p {
+    color: #64748b;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.btn-add {
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(255, 75, 92, 0.39);
+}
+
+.btn-add:hover {
+    background: #e13d4d;
+    transform: translateY(-2px);
+}
+
+/* --- TABLES CARD --- */
+.table-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    margin-bottom: 40px;
+}
+
+/* --- FIRST TABLE: DOCTOR MANAGEMENT GRID FIX --- */
+.form-header-row {
+    display: grid !important;
+    grid-template-columns: 12% 25% 20% 18% 15% 10% !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #64748b !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    align-items: center !important;
+}
+
+.form-data-row {
+    display: grid !important;
+    grid-template-columns: 12% 25% 20% 18% 15% 10% !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    transition: background 0.2s ease;
+}
+
+.form-data-row:hover {
+    background-color: #f8fafc !important;
+}
+
+.form-data-row input, .form-data-row select {
+    border: none !important;
+    background: transparent !important;
+    font-size: 15px !important;
+    color: #475569 !important;
+    outline: none !important;
+    width: 100% !important;
+}
+
+.row-id input { color: #64748b !important; font-weight: 500 !important; }
+.row-name input { color: #1e3a8a !important; font-weight: 700 !important; }
+
+/* --- SECOND TABLE: PATIENT APPOINTMENTS GRID --- */
+.appointment-header-row {
+    display: grid !important;
+    grid-template-columns: 6% 24% 16% 14% 20% 14% 6% !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #64748b !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    align-items: center !important;
+}
+
+.appointment-data-row {
+    display: grid !important;
+    grid-template-columns: 6% 24% 16% 14% 20% 14% 6% !important;
+    padding: 14px 20px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    align-items: center !important;
+    font-size: 14px !important;
+    color: #475569 !important;
+    background: #ffffff !important;
+    transition: background 0.2s ease;
+}
+
+.appointment-data-row:hover {
+    background-color: #f8fafc !important;
+}
+
+.appointment-data-row input[type="text"], 
+.appointment-data-row select {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    outline: none !important;
+    background: transparent;
+}
+
+/* --- FIELDS EXTRA STYLING --- */
+.app-id { color: #64748b; font-weight: 500; }
+.doc-allocated { color: #1e293b; font-weight: 600; }
+.doc-allocated i { color: #ff4b5c; margin-right: 6px; }
+.owner-name { font-weight: 500; color: #334155; }
+
+/* Date and Time Layout Fix */
+.date-time-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.date-time-cell i { color: #ff4b5c; margin-right: 5px; }
+.time-span { color: #94a3b8; margin-left: 0 !important; }
+
+/* --- BADGES & STATUS STYLES --- */
+.badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    background: #dcfce7;
+    color: #166534;
+    display: inline-block;
+}
+
+/* Classy Dropdown Status Badges */
+.status-select {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+    border-radius: 30px !important;
+    border: 1px solid transparent !important;
+    outline: none !important;
+    cursor: pointer;
+    text-align: center;
+    width: 120px !important;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.status-pending {
+    background-color: #fef3c7 !important;
+    color: #d97706 !important;
+    border-color: #fde68a !important;
+}
+
+.status-approved {
+    background-color: #dcfce7 !important;
+    color: #15803d !important;
+    border-color: #bbf7d0 !important;
+}
+
+.status-completed {
+    background-color: #e0f2fe !important;
+    color: #0369a1 !important;
+    border-color: #bae6fd !important;
+}
+
+.status-select:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* --- ACTIONS ROW CONTAINER FIX --- */
+.actions-cell {
+    display: flex !important;
+    gap: 14px !important;
+    justify-content: flex-end !important; /* Content table ke andar compress rakhe ga */
+    align-items: center !important;
+    padding-right: 5px;
+}
+
+.actions-cell button, .actions-cell a {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.edit-icon { color: #3b82f6 !important; cursor: pointer; transition: 0.2s; }
+.delete-icon { color: #ef4444 !important; cursor: pointer; transition: 0.2s; }
+
+.edit-icon:hover { transform: scale(1.15) !important; color: #2563eb !important; }
+.delete-icon:hover { transform: scale(1.15) !important; color: #dc2626 !important; }
+
+.no-records, .no-records-large { padding: 30px; text-align: center; color: #64748b; }
