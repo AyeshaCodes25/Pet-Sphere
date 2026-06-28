@@ -15,6 +15,16 @@ The platform features live doctor availability, online consultations,
 digital prescriptions, an emergency SOS system, and AI-powered product 
 recommendations.
 
+## 📸 Screenshots
+
+| Home Page | Collection |
+|-----------|------------|
+| ![Home](home.JPG) | ![Collection](collection.JPG) |
+
+| Pharmacy | Dashboard |
+|----------|-----------|
+| ![Pharmacy](pharmacy.JPG) | ![Dashboard](dashboard.JPG) |
+
 ## ✨ Key Features
 
 ### 👤 User Panel
