@@ -91,7 +91,7 @@ recommendations.
 ---
 
 ## 👩‍💻 Developer Contact
-**Ayesha Amjad** — Front-End Developer
+**Ayesha Amjad** — Full-Stack Developer (Front-End Focused) & Digital Marketing Specialist
 📧 ayeshaamjad819@gmail.com
 🌐 Live Project: https://petsphere.infinityfree.me
 🔗 github.com/AyeshaCodes25
